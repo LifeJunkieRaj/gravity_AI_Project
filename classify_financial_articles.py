@@ -10,7 +10,7 @@ def process(inPath, outPath):
     # read input file
     input_df = pd.read_csv(inPath)
     # vectorize the data
-    features = tdidf_vectorizer.transform(input_df['body'])
+    features = tfidf_vectorizer.transform(input_df['body'])
     # predict the classes
     predictions = model.predict(features)
     #convert output labels to categories
